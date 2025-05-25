@@ -8,8 +8,7 @@ const jwt = require("jsonwebtoken");
 const axios = require("axios");
 const router = express.Router();
 
-const OPENAI_API_KEY =
-  "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";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // 📌 REGISTER USER
 router.post("/users/register", async (req, res) => {
